@@ -1,5 +1,7 @@
 {
   "name": "familia",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
