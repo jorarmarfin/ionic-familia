@@ -1,4 +1,12 @@
-<app-header></app-header>
+<app-header Titulo="Familia"></app-header>
 <ion-content>
+    <ion-card *ngFor="let item of miembros">
+        <ion-card-header (click)="onClick(item.uuid)">
+            <ion-card-title>{{ item.nombre }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p [innerHTML]="item.descripcion"></p>
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>
