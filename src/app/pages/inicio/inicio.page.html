@@ -1,11 +1,28 @@
-<app-header Titulo="Familia"></app-header>
+<ion-header >
+    <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+        <ion-button >
+          <ion-menu-button></ion-menu-button>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Familia</ion-title>
+    </ion-toolbar>
+  </ion-header>
 <ion-content>
-    <ion-card *ngFor="let item of miembros">
-        <ion-card-header (click)="onClick(item.uuid)">
+    <ion-card *ngFor="let item of miembros" (click)="onClick(item.nid)">
+        <ion-card-header >
             <ion-card-title>{{ item.nombre }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
             <p [innerHTML]="item.descripcion"></p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card color="danger" routerLink="/botiquin">
+        <ion-card-header >
+            <ion-card-title>Botiquín</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>Los medicamentos que tenemos</p>
         </ion-card-content>
     </ion-card>
 

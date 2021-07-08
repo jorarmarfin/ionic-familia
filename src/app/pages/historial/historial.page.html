@@ -1,0 +1,18 @@
+<app-header Titulo="HISTORIAL MÉDICO"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-title>{{ miembro }}</ion-title>
+    </ion-list-header>
+  </ion-list>
+  <ion-card *ngFor="let item of historial">
+    <ion-card-header>
+      <ion-card-subtitle>{{ item.fecha }}</ion-card-subtitle>
+      <ion-card-title>{{ item.asunto }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content
+    </ion-card-content>
+  </ion-card>
+</ion-content>

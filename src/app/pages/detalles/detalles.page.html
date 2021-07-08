@@ -1,0 +1,12 @@
+<app-header Titulo="DETALLES"></app-header>
+
+<ion-content>
+<ion-card *ngFor="let item of opciones" routerLink="/{{ item.ruta }}/{{ nid }}">
+  <ion-card-header>
+    <ion-card-title>{{ item.nombre }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ item.descripcion }}
+  </ion-card-content>
+</ion-card>
+</ion-content>

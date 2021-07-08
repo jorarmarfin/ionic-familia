@@ -1,0 +1,20 @@
+<app-header Titulo="Admin Medicamentos"></app-header>
+
+<ion-content>
+    <form autocomplete="off" (ngSubmit)="enviar()" [formGroup]="formMedicamento">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-input placeholder="Nombre medicamento:" formControlName="nombre"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-textarea placeholder="Descripción medicamento:" formControlName="descripcion"></ion-textarea>
+                </ion-item>
+            </ion-card-content>
+
+            <ion-card-header>
+                <ion-button type="submit" color="primary">GUARDAR</ion-button>
+            </ion-card-header>
+        </ion-card>
+    </form>
+</ion-content>
