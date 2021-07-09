@@ -4,9 +4,10 @@ import { environment } from 'src/environments/environment';
 import { Historial } from '../interfaces/Historial.interface';
 import { Medicamentos } from '../interfaces/Medicamentos.interface';
 import { Miembros } from '../interfaces/Miembros.interface';
+import { Node } from '../interfaces/Node.interface';
 import { Vacunas } from '../interfaces/Vacunas.interface';
 
-const URL = environment.url;
+const URL = environment.url+'/api';
 const TOKEN = btoa('user_rest:AjHol8Twac');
 const httpOptions = {
   headers: new HttpHeaders(
@@ -35,6 +36,9 @@ export class DrupalService {
   }
   getMedicamentos(){
     return this.http.get<Medicamentos[]>(`${URL}/medicamentos?_format=json`,httpOptions);
+  }
+  setNode(node:Node){
+    return this.http.post(`${environment.url}/node?_format=json`,node,httpOptions);
   }
   getBuscarMedicamentos(nombre:string){
     return this.http.get<Medicamentos[]>(`${URL}/buscar-medicamentos?_format=json&nombre=${nombre}`,httpOptions);

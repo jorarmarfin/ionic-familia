@@ -15,6 +15,7 @@
         </ion-card-header>
         <ion-card-content>
             <p [innerHTML]="item.descripcion"></p>
+            <p> <strong>Fecha nacimiento</strong> {{ item.fecha_nacimiento |  date:'medium' }}</p>
         </ion-card-content>
     </ion-card>
     <ion-card color="danger" routerLink="/botiquin">

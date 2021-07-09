@@ -20,6 +20,8 @@ export class InicioPage implements OnInit {
     this.drupal.getMiembros().subscribe(resp=>{
       this.miembros=resp;
       this.loading.dismiss();
+    },error=>{
+      this.loading.dismiss();
     })
   }
   onClick(uuid:string){
