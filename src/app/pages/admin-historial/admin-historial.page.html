@@ -1,5 +1,28 @@
 <app-header Titulo="Admin Historial"></app-header>
 
 <ion-content>
+    <form autocomplete="off" (ngSubmit)="enviar()" [formGroup]="formHistoria">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-input placeholder="Asunto de consulta:" formControlName="asunto"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-select placeholder="Seleccionar miembro" interface="action-sheet" formControlName="miembro">
+                        <ion-select-option value="{{ item.nid }}" *ngFor="let item of miembros">{{ item.nombre }}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-textarea placeholder="Descripción de la consulta:" formControlName="descripcion"></ion-textarea>
+                </ion-item>
+                <ion-item>
+                    <ion-textarea placeholder="Diagnóstico de la consulta:" formControlName="diagnostico"></ion-textarea>
+                </ion-item>
+            </ion-card-content>
+            <ion-card-header>
+                <ion-button type="submit" color="primary">GUARDAR</ion-button>
+            </ion-card-header>
+        </ion-card>
+    </form>
 
 </ion-content>

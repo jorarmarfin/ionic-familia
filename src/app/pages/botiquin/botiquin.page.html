@@ -3,12 +3,12 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-        <ion-searchbar color="warning" placeholder="Buscar" (ionChange)="buscar($event)"></ion-searchbar>
+        <ion-searchbar color="warning" placeholder="Buscar" (ionChange)="buscar($event)" [debounce]="750"></ion-searchbar>
       </ion-card-header>
       <ion-card-content>
         <ion-list>
           <ion-item *ngFor="let item of medicamentos">
-            <ion-label>{{ item.nombre }}</ion-label>
+            <ion-label>{{ item.nombre }} <br><ion-card-subtitle>{{ item.resumen }}</ion-card-subtitle> </ion-label>
             <ion-card-subtitle>{{ item.fecha }}</ion-card-subtitle>
             
           </ion-item>

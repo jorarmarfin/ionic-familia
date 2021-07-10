@@ -1,14 +1,17 @@
 <app-header Titulo="VACUNAS"></app-header>
 
 <ion-content>
-<ion-list>
-  <ion-list-header>
-    <ion-title>{{ miembro }}</ion-title>
-    
-  </ion-list-header>
-  <ion-item *ngFor="let item of vacunas">
-    <ion-label>{{ item.vacuna }}</ion-label>
-    {{ item.fecha }}
-  </ion-item>
-</ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ miembro }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of vacunas">
+          <ion-label>{{ item.vacuna }}</ion-label>
+          {{ item.fecha }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
