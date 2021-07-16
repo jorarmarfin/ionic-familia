@@ -12,7 +12,14 @@
       <ion-card-title>{{ item.asunto }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Awesome content
+      <ion-text color="primary">
+        <p><strong>Descripción</strong></p>
+        <p [innerHTML]="item.descripcion"> </p><br>
+      </ion-text>
+      <ion-text color="danger">
+        <p><strong>Diagnóstico</strong></p>
+        <p [innerHTML]="item.diagnostico"> </p>
+      </ion-text>
     </ion-card-content>
   </ion-card>
 </ion-content>

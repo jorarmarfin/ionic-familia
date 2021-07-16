@@ -26,7 +26,7 @@ export class AdminHistorialPage implements OnInit {
     },
     {
       nombre: "Francisco Mayta",
-      uuid: "06a26b00-fcb0-45f5-8bd7-bbe648007f3",
+      uuid: "06a26b00-fcb0-45f5-8bd7-bbe648007f31",
       nid: "3"
     }
   ];
