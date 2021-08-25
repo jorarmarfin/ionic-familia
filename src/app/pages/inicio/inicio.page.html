@@ -9,6 +9,10 @@
     </ion-toolbar>
   </ion-header>
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
     <ion-card *ngFor="let item of miembros" (click)="onClick(item.nid)">
         <ion-card-header >
             <ion-card-title>{{ item.nombre }}</ion-card-title>

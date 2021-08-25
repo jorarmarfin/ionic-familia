@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { Historial } from 'src/app/interfaces/Historial.interface';
 import { DrupalService } from 'src/app/services/drupal.service';
@@ -15,7 +15,10 @@ export class HistorialPage implements OnInit {
   miembro:string='';
   private loading: HTMLIonLoadingElement;
 
-  constructor(private activateroute:ActivatedRoute,private drupal:DrupalService,private loadingController: LoadingController) { }
+  constructor(private activateroute:ActivatedRoute,
+    private drupal:DrupalService,
+    private router:Router,
+    private loadingController: LoadingController) { }
 
   ngOnInit() {
     this.presentLoading();
@@ -35,6 +38,9 @@ export class HistorialPage implements OnInit {
     });
     await this.loading.present();
 
+  }
+  addHistoria(){
+    this.router.navigate(['admin-historial']);
   }
 
 }

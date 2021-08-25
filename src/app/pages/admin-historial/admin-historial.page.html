@@ -9,7 +9,7 @@
                 </ion-item>
                 <ion-item>
                     <ion-select placeholder="Seleccionar miembro" interface="action-sheet" formControlName="miembro">
-                        <ion-select-option value="{{ item.nid }}" *ngFor="let item of miembros">{{ item.nombre }}</ion-select-option>
+                        <ion-select-option *ngFor="let item of miembros; ;let i=index" value="{{ i }}">{{ item.nombre }}</ion-select-option>
                     </ion-select>
                 </ion-item>
                 <ion-item>
